@@ -1,0 +1,19 @@
+{
+  "name": "back",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mateus5555577777/node.git"
+  },
+  "author": "Mateus",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Mateus5555577777/node/issues"
+  },
+  "homepage": "https://github.com/Mateus5555577777/node#readme"
+}
