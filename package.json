@@ -8,7 +8,8 @@
     "start": "node ./bin/www",
     "lint": "eslint **/*.js --ignore-pattern node_modules/",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "debug": "SET DEBUG=back:* & npm start"
+    "debug": "SET DEBUG=back:* & npm start",
+    "nodemon": "nodemon ./bin/www"
   },
   "repository": {
     "type": "git",
@@ -26,7 +27,8 @@
     "express": "^4.19.2",
     "http-errors": "~1.6.3",
     "jade": "^0.29.0",
-    "morgan": "~1.9.1"
+    "morgan": "~1.9.1",
+    "mysql2": "^3.9.3"
   },
   "devDependencies": {
     "eslint": "^8.57.0",
