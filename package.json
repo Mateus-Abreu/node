@@ -19,7 +19,7 @@
   "homepage": "https://github.com/Mateus5555577777/node#readme",
   "dependencies": {
     "express": "^4.19.2",
-    "generator": "^1.0.1"
+    "generator": "^0.0.4"
   },
   "devDependencies": {
     "eslint": "^8.57.0",
