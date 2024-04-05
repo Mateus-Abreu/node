@@ -1,24 +1,22 @@
 var express = require('express');
 var router = express.Router();
 
+const express = require('express');
+const router = express.Router();
+const clientesController = require('../controllers/clientesController');
+const nomeMiddlewares = require('../middlewares/nomeMiddlewares');
+
+
 /* GET clientes listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource GET ');
-});
+router.get('/', clientesController.findAll);
 
 /* PUT clientes listing. */
-router.put('/', function(req, res, next) {
-  res.send('respond with a resource PUT');
-});
+router.put('/', nomeMiddlewares.validateName, clientesController.update);
 
 /* POST clientes listing. */
-router.post('/', function(req, res, next) {
-  res.send('respond with a resource POST');
-});
+router.post('/', clientesController.save);
 
 /* DELETE clientes listing. */
-router.delete('/', function(req, res, next) {
-  res.send('respond with a resource DELETE');
-});
+router.delete('/:id', clientesController.remove);
 
 module.exports = router;
