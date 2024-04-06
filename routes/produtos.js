@@ -1,22 +1,29 @@
 var express = require('express');
 var router = express.Router();
 
-
-
-const produtosController = require('../controllers/produtosController');
-const nomeMiddlewares = require('../middlewares/nomeMiddlewares');
-
-
 /* GET produtos listing. */
-router.get('/', produtosController.findAll);
+router.get('/', function(req, res, next) {
+  res.send('respond with a resource GET ');
+});
 
 /* PUT produtos listing. */
-router.put('/', produtosController.update);
+router.put('/', function(req, res, next) {
+  res.send('respond with a resource PUT');
+});
 
 /* POST produtos listing. */
-router.post('/', nomeMiddlewares.validateName, produtosController.save);
+router.post('/', function(req, res, next) {
+  res.send('respond with a resource POST');
+});
 
 /* DELETE produtos listing. */
-router.delete('/:id', produtosController.remove);
+router.delete('/', function(req, res, next) {
+  res.send('respond with a resource DELETE');
+});
 
 module.exports = router;
+
+
+
+
+
