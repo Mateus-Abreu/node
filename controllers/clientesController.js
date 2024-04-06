@@ -14,8 +14,7 @@ const save = async (request, response) => {
 const update = async (cliente) => {
     const query = 'UPDATE clientes SET nome = ?, sobrenome = ?, email = ?, idade = ? WHERE id = ?';
     const isOk = await (await connection).execute(query,
-   [cliente.nome, cliente.sobrenome, cliente.email, cliente.idade,
-   cliente.id]);
+    [cliente.nome, cliente.sobrenome, cliente.email, cliente.idade, cliente.id]);
     return isOk[0].affectedRows === 1;
 }
 
