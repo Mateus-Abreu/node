@@ -5,17 +5,17 @@ const findAll = async () => {
  return produtos[0];
 }
 
-const update = async (cliente) => {
+const update = async (produto) => {
  const query = 'UPDATE produtos SET nome = ?, descricao = ?,preco = ?, data_atualizado = ? WHERE id = ?';
  const isOk = await (await connection).execute(query,
-[cliente.nome, cliente.sobrenome, cliente.email, cliente.idade, cliente.id]);
+[produto.nome, produto.sobrenome, produto.email, produto.idade, produto.id]);
  return isOk[0].affectedRows === 1;
 }
 
-const save = async (cliente) => {
+const save = async (produto) => {
     const query = 'INSERT INTO produtos(nome, descricao, preco,  data_atualizado) VALUES (?, ?, ?, ?)';
     const isOk = await (await connection).execute(query,
-   [cliente.nome, cliente.sobrenome, cliente.email, cliente.idade]);
+   [produto.nome, produto.sobrenome, produto.email, produto.idade]);
     return isOk[0].affectedRows === 1;
 }
 

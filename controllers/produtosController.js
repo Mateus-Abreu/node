@@ -11,11 +11,11 @@ const save = async (request, response) => {
     response.status(400).json({ "[ERROR/SERVER]" : "Falha ao salvar produtos" });
 };
 
-const update = async (produtos) => {
+const update = async (produto) => {
     const query = 'UPDATE produtos SET nome = ?, sobrenome = ?, email = ?, idade = ? WHERE id = ?';
     const isOk = await (await connection).execute(query,
-   [produtos.nome, produtos.sobrenome, produtos.email, produtos.idade,
-   produtos.id]);
+   [produto.nome, produto.sobrenome, produto.email, produto.idade,
+   produto.id]);
     return isOk[0].affectedRows === 1;
 }
 
