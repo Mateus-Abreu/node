@@ -1,22 +1,22 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+// eslint-disable-next-line new-cap
+const router = express.Router();
 
 
+router.get('/', function(req, res, next) {
+  res.send('GET clientes');
+});
 
-const clientesController = require('../controllers/clientesController');
-const nomeMiddlewares = require('../middlewares/nomeMiddlewares');
+router.post('/', function(req, res, next) {
+  res.send('POST clientes');
+});
 
+router.delete('/', function(req, res, next) {
+  res.send('DELETE clientes');
+});
 
-/* GET clientes listing. */
-router.get('/', clientesController.findAll);
-
-/* PUT clientes listing. */
-router.put('/', clientesController.update);
-
-/* POST clientes listing. */
-router.post('/', nomeMiddlewares.validateName, clientesController.save);
-
-/* DELETE clientes listing. */
-router.delete('/:id', clientesController.remove);
+router.put('/', function(req, res, next) {
+  res.send('PUT clientes');
+});
 
 module.exports = router;
